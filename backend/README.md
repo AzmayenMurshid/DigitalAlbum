@@ -16,6 +16,15 @@ npm install
 npm run dev
 ```
 
+## Run with Docker
+
+```bash
+docker build -t digitalalbum-backend ./backend
+docker run --rm -p 3001:3001 --env-file ./backend/.env digitalalbum-backend
+```
+
+At minimum, set `DATABASE_URL` in `backend/.env`.
+
 ## Endpoints
 
 - `GET /api/health`
